@@ -27,13 +27,13 @@
 )
 
 (deftemplate procesamiento_tarifa
-    (slot min-tarifa)
-    (slot max-tarifa)
+    (slot min_tarifa)
+    (slot max_tarifa)
 )
 
-(deftemplate procesamiento_puntaje
-    (slot min-puntaje)
-    (slot max-puntaje)
+(deftemplate procesamiento_resena
+    (slot min_puntaje)
+    (slot max_puntaje)
 )
 
 (deftemplate procesamiento_comida
@@ -66,7 +66,7 @@
     (slot id_museo)
     (slot distrito)
     (slot puntaje_resena)
-    (slor ha_inicio)
+    (slot ha_inicio)
     (slot ha_fin)
     (slot hc_inicio)
     (slot hc_fin)

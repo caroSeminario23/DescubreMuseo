@@ -11,7 +11,7 @@
     (slot descuento_ancianos)
     (slot descuento_discapacitados)
     (slot comida_disponible)
-    (slot reserva_entrada)
+    (slot reserva_usuario)
     (slot estacionamiento_usuario)
     (slot venta_objetos_usuario)
     (slot permiso_foto_usuario)

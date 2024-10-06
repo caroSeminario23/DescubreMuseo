@@ -8,32 +8,32 @@
     (assert (procesamiento_tarifa (min_tarifa 0) (max_tarifa 0)))
 )
 
-; Si tarifa_usuario=barata → min_tarifa=0 y max_tarifa=15
+; Si tarifa_usuario=barata → min_tarifa=0.01 y max_tarifa=15
 (defrule regla_tarifa_barata
     (preferencias_usuario (tarifa_usuario "barata"))
     =>
-    (assert (procesamiento_tarifa (min_tarifa 0) (max_tarifa 15)))
+    (assert (procesamiento_tarifa (min_tarifa 0.01) (max_tarifa 15)))
 )
 
-; Si tarifa_usuario=media → min_tarifa=15 y max_tarifa=30
+; Si tarifa_usuario=media → min_tarifa=15.01 y max_tarifa=30
 (defrule regla_tarifa_media
     (preferencias_usuario (tarifa_usuario "media"))
     =>
-    (assert (procesamiento_tarifa (min_tarifa 15) (max_tarifa 30)))
+    (assert (procesamiento_tarifa (min_tarifa 15.01) (max_tarifa 30)))
 )
 
-; Si tarifa_usuario=alta → min_tarifa=30 y max_tarifa=45
+; Si tarifa_usuario=alta → min_tarifa=30.01 y max_tarifa=45
 (defrule regla_tarifa_alta
     (preferencias_usuario (tarifa_usuario "alta"))
     =>
-    (assert (procesamiento_tarifa (min_tarifa 30) (max_tarifa 45)))
+    (assert (procesamiento_tarifa (min_tarifa 30.01) (max_tarifa 45)))
 )
 
-; Si tarifa_usuario=muy_alta → min_tarifa=45 y max_tarifa=1000
+; Si tarifa_usuario=muy_alta → min_tarifa=45.01 y max_tarifa=1000
 (defrule regla_tarifa_muy_alta
     (preferencias_usuario (tarifa_usuario "muy_alta"))
     =>
-    (assert (procesamiento_tarifa (min_tarifa 45) (max_tarifa 1000)))
+    (assert (procesamiento_tarifa (min_tarifa 45.01) (max_tarifa 1000)))
 )
 
 
@@ -128,32 +128,32 @@
     (assert (procesamiento_restaurantes (min_rest_prox 0) (max_rest_prox 0)))
 )
 
-; Si cantidad_rest_cerca=pocos → min_rest_prox=0 y max_rest_prox=1000
+; Si cantidad_rest_cerca=pocos → min_rest_prox=1 y max_rest_prox=1000
 (defrule regla_rest_cerca_pocos
     (preferencias_usuario (cantidad_rest_cerca "pocos"))
     =>
-    (assert (procesamiento_restaurantes (min_rest_prox 0) (max_rest_prox 1000)))
+    (assert (procesamiento_restaurantes (min_rest_prox 1) (max_rest_prox 1000)))
 )
 
-; Si cantidad_rest_cerca=algunos → min_rest_prox=1000 y max_rest_prox=2000
+; Si cantidad_rest_cerca=algunos → min_rest_prox=1001 y max_rest_prox=2000
 (defrule regla_rest_cerca_algunos
     (preferencias_usuario (cantidad_rest_cerca "algunos"))
     =>
-    (assert (procesamiento_restaurantes (min_rest_prox 1000) (max_rest_prox 2000)))
+    (assert (procesamiento_restaurantes (min_rest_prox 1001) (max_rest_prox 2000)))
 )
 
-; Si cantidad_rest_cerca=muchos → min_rest_prox=2000 y max_rest_prox=3000
+; Si cantidad_rest_cerca=muchos → min_rest_prox=2001 y max_rest_prox=3000
 (defrule regla_rest_cerca_muchos
     (preferencias_usuario (cantidad_rest_cerca "muchos"))
     =>
-    (assert (procesamiento_restaurantes (min_rest_prox 2000) (max_rest_prox 3000)))
+    (assert (procesamiento_restaurantes (min_rest_prox 2001) (max_rest_prox 3000)))
 )
 
-; Si cantidad_rest_cerca=demasiados → min_rest_prox=3000 y max_rest_prox=10000
+; Si cantidad_rest_cerca=demasiados → min_rest_prox=3001 y max_rest_prox=10000
 (defrule regla_rest_cerca_demasiados
     (preferencias_usuario (cantidad_rest_cerca "demasiados"))
     =>
-    (assert (procesamiento_restaurantes (min_rest_prox 3000) (max_rest_prox 10000)))
+    (assert (procesamiento_restaurantes (min_rest_prox 3001) (max_rest_prox 10000)))
 )
 
 
@@ -165,30 +165,30 @@
     (assert (procesamiento_atracciones (min_atracciones 0) (max_atracciones 0)))
 )
 
-; Si cantidad_atrac_cerca=pocos → min_atracciones=0 y max_atracciones=100
+; Si cantidad_atrac_cerca=pocos → min_atracciones=1 y max_atracciones=100
 (defrule regla_atrac_cerca_pocos
     (preferencias_usuario (cantidad_atrac_cerca "pocos"))
     =>
-    (assert (procesamiento_atracciones (min_atracciones 0) (max_atracciones 100)))
+    (assert (procesamiento_atracciones (min_atracciones 1) (max_atracciones 100)))
 )
 
-; Si cantidad_atrac_cerca=algunos → min_atracciones=100 y max_atracciones=200
+; Si cantidad_atrac_cerca=algunos → min_atracciones=101 y max_atracciones=200
 (defrule regla_atrac_cerca_algunos
     (preferencias_usuario (cantidad_atrac_cerca "algunos"))
     =>
-    (assert (procesamiento_atracciones (min_atracciones 100) (max_atracciones 200)))
+    (assert (procesamiento_atracciones (min_atracciones 101) (max_atracciones 200)))
 )
 
-; Si cantidad_atrac_cerca=muchos → min_atracciones=200 y max_atracciones=300
+; Si cantidad_atrac_cerca=muchos → min_atracciones=201 y max_atracciones=300
 (defrule regla_atrac_cerca_muchos
     (preferencias_usuario (cantidad_atrac_cerca "muchos"))
     =>
-    (assert (procesamiento_atracciones (min_atracciones 200) (max_atracciones 300)))
+    (assert (procesamiento_atracciones (min_atracciones 201) (max_atracciones 300)))
 )
 
-; Si cantidad_atrac_cerca=demasiados → min_atracciones=300 y max_atracciones=10000
+; Si cantidad_atrac_cerca=demasiados → min_atracciones=301 y max_atracciones=10000
 (defrule regla_atrac_cerca_demasiados
     (preferencias_usuario (cantidad_atrac_cerca "demasiados"))
     =>
-    (assert (procesamiento_atracciones (min_atracciones 300) (max_atracciones 10000)))
+    (assert (procesamiento_atracciones (min_atracciones 301) (max_atracciones 10000)))
 )

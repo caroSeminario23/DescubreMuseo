@@ -1,0 +1,5 @@
+# ENLACES DE DIA ATENCION
+
+GET http://127.0.0.1:5000/dia_atencion_routes/get_dia_atencion/1
+
+GET http://127.0.0.1:5000/dia_atencion_routes/get_dias_atencion

@@ -1,0 +1,7 @@
+# ENLACES DE MUSEO
+
+GET http://127.0.0.1:5000/museo_routes/get_museos
+#####
+
+GET http://127.0.0.1:5000/museo_routes/get_museo/1
+#####

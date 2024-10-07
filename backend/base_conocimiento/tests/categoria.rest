@@ -1,0 +1,7 @@
+# ENLACES DE CATEGORIA
+
+GET http://127.0.0.1:5000/categoria_routes/get_categorias
+#####
+
+GET http://127.0.0.1:5000/categoria_routes/get_categoria/1
+#####

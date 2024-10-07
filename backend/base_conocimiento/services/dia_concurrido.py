@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, make_response
 from utils.db import db
 from models.dia_concurrido import DiaConcurrido
-from schemas.dia_concurrido_schema import dia_concurrido_schema, dias_concurrido_schema
+from schemas.dia_concurrido_schema import dia_concurrido_schema, dias_concurridos_schema
 
 dia_concurrido_routes = Blueprint("dia_concurrido_routes", __name__)
 
@@ -40,7 +40,7 @@ def get_dias_concurrido():
         return make_response(jsonify(data), 404)
 
 
-    result = dias_concurrido_schema.dump(dias_concurrido)
+    result = dias_concurridos_schema.dump(dias_concurrido)
 
     data = {
         'message': 'Dias concurridos obtenidos correctamente',
@@ -52,7 +52,7 @@ def get_dias_concurrido():
 
 @dia_concurrido_routes.route("/get_dia_concurrido/<int:id_museo>/<int:id_dia>", methods=["GET"])
 def get_dia_concurrido(id_museo, id_dia):
-    dia_concurrido = DiaConcurrido.query_by(id_museo=id_museo, id_dia=id_dia).first()
+    dia_concurrido = DiaConcurrido.query.filter_by(id_museo=id_museo, id_dia=id_dia).first()
 
     if not dia_concurrido:
         data = {

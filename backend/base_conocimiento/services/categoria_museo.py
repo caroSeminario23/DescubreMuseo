@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, make_response
 from utils.db import db
-from models.dia_concurrido import CategoriaMuseo
+from models.categoria_museo import CategoriaMuseo
 from schemas.categoria_museo_schema import categoria_museo_schema, categorias_museo_schema
 
 categoria_museo_routes = Blueprint("categoria_museo_routes", __name__)

@@ -179,7 +179,7 @@ class Museo(db.Model):
     # Relaciones
     distrito = relationship(
         'Distrito', 
-        back_ref='museo-distrito'
+        backref='museo-distrito'
         )
     
     # Constructor

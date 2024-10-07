@@ -3,5 +3,5 @@
 GET http://127.0.0.1:5000/categoria_museo_routes/get_categorias_museo
 #####
 
-GET http://127.0.0.1:5000/categoria_museo_routes/get_categoria_museo/1
+GET http://127.0.0.1:5000/categoria_museo_routes/get_categoria_museo/2/1
 #####

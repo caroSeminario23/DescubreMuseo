@@ -1,2 +1,3 @@
 backend/venv
 backend/base_conocimiento/.env
+__pycache__/

@@ -29,7 +29,7 @@ class Museo(db.Model):
         nullable=False
         )
     
-    puntaje_reseña = db.Column(
+    puntaje_resena = db.Column(
         db.Numeric(2, 1),
         nullable=False
         )
@@ -59,7 +59,7 @@ class Museo(db.Model):
         nullable=False
         )
     
-    tarifa_niños = db.Column(
+    tarifa_ninos = db.Column(
         db.Numeric(5, 2),
         nullable=True
         )
@@ -153,26 +153,22 @@ class Museo(db.Model):
     
     sitio_web = db.Column(
         db.Text,
-        nullable=True,
-        unique=True
+        nullable=True
         )
     
     pag_facebook = db.Column(
         db.Text,
-        nullable=True,
-        unique=True
+        nullable=True
         )
     
     pag_instagram = db.Column(
         db.Text,
-        nullable=True,
-        unique=True
+        nullable=True
         )
     
     pag_tiktok = db.Column(
         db.Text,
-        nullable=True,
-        unique=True
+        nullable=True
         )
     
     notas = db.Column(
@@ -191,13 +187,13 @@ class Museo(db.Model):
         nombre,
         id_distrito,
         direccion,
-        puntaje_reseña,
+        puntaje_resena,
         ha_inicio,
         ha_fin,
         hc_inicio,
         hc_fin,
         tarifa_normal,
-        tarifa_niños,
+        tarifa_ninos,
         tarifa_ancianos,
         tarifa_discapacitados,
         reserva_entrada,
@@ -224,13 +220,13 @@ class Museo(db.Model):
         self.nombre = nombre
         self.id_distrito = id_distrito
         self.direccion = direccion
-        self.puntaje_reseña = puntaje_reseña
+        self.puntaje_resena = puntaje_resena
         self.ha_inicio = ha_inicio
         self.ha_fin = ha_fin
         self.hc_inicio = hc_inicio
         self.hc_fin = hc_fin
         self.tarifa_normal = tarifa_normal
-        self.tarifa_niños = tarifa_niños
+        self.tarifa_ninos = tarifa_ninos
         self.tarifa_ancianos = tarifa_ancianos
         self.tarifa_discapacitados = tarifa_discapacitados
         self.reserva_entrada = reserva_entrada

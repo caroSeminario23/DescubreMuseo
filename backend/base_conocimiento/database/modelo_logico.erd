@@ -4,8 +4,8 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": -47.5515,
+    "scrollLeft": -134.802,
     "zoomLevel": 1,
     "show": 511,
     "database": 16,
@@ -518,7 +518,7 @@
       "0wtkNBQQwSl08GRNUFpVK": {
         "id": "0wtkNBQQwSl08GRNUFpVK",
         "tableId": "fNgQvLWwFT185z2mDceq-",
-        "name": "puntaje_reseña",
+        "name": "puntaje_resena",
         "comment": "reseña",
         "dataType": "numeric(2,1)",
         "default": "",
@@ -531,7 +531,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1727744106528,
+          "updateAt": 1728332121870,
           "createAt": 1727719846415
         }
       },
@@ -1062,7 +1062,7 @@
         "comment": "",
         "dataType": "text",
         "default": "",
-        "options": 4,
+        "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
@@ -1071,7 +1071,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1727721918886,
+          "updateAt": 1728332338559,
           "createAt": 1727720706617
         }
       },
@@ -1082,7 +1082,7 @@
         "comment": "",
         "dataType": "text",
         "default": "",
-        "options": 4,
+        "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 76,
@@ -1091,7 +1091,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1727721916002,
+          "updateAt": 1728332339919,
           "createAt": 1727720722315
         }
       },
@@ -1102,7 +1102,7 @@
         "comment": "",
         "dataType": "text",
         "default": "",
-        "options": 4,
+        "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 80,
@@ -1111,7 +1111,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1727721917062,
+          "updateAt": 1728332340372,
           "createAt": 1727720731975
         }
       },
@@ -1122,7 +1122,7 @@
         "comment": "",
         "dataType": "text",
         "default": "",
-        "options": 4,
+        "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 60,
@@ -1131,7 +1131,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1727721917673,
+          "updateAt": 1728332340937,
           "createAt": 1727720739446
         }
       },
@@ -1647,7 +1647,7 @@
       1727719846414,
       -1,
       {
-        "name": 1727744106527,
+        "name": 1728332121866,
         "comment": 1727719857771,
         "dataType": 1727721473570,
         "options(notNull)": 1727721422044
@@ -1957,7 +1957,7 @@
       {
         "name": 1727720717702,
         "dataType": 1727721354336,
-        "options(unique)": 1727721918885
+        "options(unique)": 1728332338557
       }
     ],
     "56xxzq8Ps1Au95-xO3NZW": [
@@ -1967,7 +1967,7 @@
       {
         "name": 1727720726604,
         "dataType": 1727721357224,
-        "options(unique)": 1727721916001
+        "options(unique)": 1728332339918
       }
     ],
     "GpjNr8HvSZ0BXiQT2ZBim": [
@@ -1977,7 +1977,7 @@
       {
         "name": 1727720738793,
         "dataType": 1727721359161,
-        "options(unique)": 1727721917061
+        "options(unique)": 1728332340371
       }
     ],
     "f-WHTRJiolxpnmfxm1STO": [
@@ -1987,7 +1987,7 @@
       {
         "name": 1727720745691,
         "dataType": 1727721360717,
-        "options(unique)": 1727721917672
+        "options(unique)": 1728332340936
       }
     ],
     "IcZ1x1mx59fhcjvoVE1cN": [

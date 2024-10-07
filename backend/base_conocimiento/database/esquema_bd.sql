@@ -47,7 +47,7 @@ CREATE TABLE Museo
   nombre                varchar(200) NOT NULL UNIQUE,
   id_distrito           integer      NOT NULL,
   direccion             varchar(300) NOT NULL,
-  puntaje_reseña        numeric(2,1) NOT NULL,
+  puntaje_resena        numeric(2,1) NOT NULL,
   ha_inicio             time         NOT NULL,
   ha_fin                time         NOT NULL,
   hc_inicio             time        ,
@@ -71,15 +71,15 @@ CREATE TABLE Museo
   telefono              varchar(9)   UNIQUE,
   anexo                 varchar(5)  ,
   email                 varchar(250) UNIQUE,
-  sitio_web             text         UNIQUE,
-  pag_facebook          text         UNIQUE,
-  pag_instagram         text         UNIQUE,
-  pag_tiktok            text         UNIQUE,
+  sitio_web             text        ,
+  pag_facebook          text        ,
+  pag_instagram         text        ,
+  pag_tiktok            text        ,
   notas                 text        ,
   PRIMARY KEY (id_museo)
 );
 
-COMMENT ON COLUMN Museo.puntaje_reseña IS 'reseña';
+COMMENT ON COLUMN Museo.puntaje_resena IS 'reseña';
 
 COMMENT ON COLUMN Museo.ha_inicio IS 'hora atención';
 

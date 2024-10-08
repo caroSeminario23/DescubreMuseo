@@ -7,7 +7,7 @@ dia_concurrido_routes = Blueprint("dia_concurrido_routes", __name__)
 
 @dia_concurrido_routes.route("/create_dia_concurrido", methods=["POST"])
 def create_dia_concurrido():
-    id_museo = request.json.get('id_musea')
+    id_museo = request.json.get('id_museo')
     id_dia = request.json.get('id_dia')
 
     new_dia_concurrido = DiaConcurrido(

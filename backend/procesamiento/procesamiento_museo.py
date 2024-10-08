@@ -39,8 +39,8 @@ data = {
 }
 
 data_categoria = {
-    "Temático": True,
-    "Arqueológico": False,
+    "Tematico": True,
+    "Arqueologico": False,
     "Arte": True,
     "Histórico": False
 }
@@ -131,15 +131,15 @@ def procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
 
     # Agregar las categorías con valor True al nuevo diccionario
     categorias_true = [key for key, value in data_categoria.items() if value]
-    ordered_data["categoria"] =  "".join([f'"{cat}"' for cat in categorias_true])
+    ordered_data["categoria"] =  " ".join([f'"{cat}"' for cat in categorias_true])
 
     # Agregar los días de atención con valor True al nuevo diccionario
     dias_atencion_true = [key for key, value in data_dia_atencion.items() if value]
-    ordered_data["dia_atencion"] = "".join([f'"{dia}"' for dia in dias_atencion_true])
+    ordered_data["dia_atencion"] = " ".join([f'"{dia}"' for dia in dias_atencion_true])
 
     # Agregar los días concurridos con valor True al nuevo diccionario
     dias_concurrido_true = [key for key, value in data_dia_concurrido.items() if value]
-    ordered_data["dia_concurrido"] ="".join([f'"{dia}"' for dia in dias_concurrido_true])
+    ordered_data["dia_concurrido"] =" ".join([f'"{dia}"' for dia in dias_concurrido_true])
 
 
     return ordered_data

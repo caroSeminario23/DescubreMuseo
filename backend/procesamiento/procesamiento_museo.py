@@ -1,40 +1,40 @@
 data = {
-    "accesibilidad": True,
+    "accesibilidad": True,#accesibilidad ->18
     "anexo": None,
     "direccion": "Calle Retiro 160 - Miraflores",
     "distrito": {
-        "nombre": "Miraflores"
+        "nombre": "Miraflores"#distrito ->2
     },
-    "email": "info@museoamano.org",
-    "estacionamiento": True,
-    "ha_fin": "17:00:00",
-    "ha_inicio": "10:00:00",
-    "hc_fin": "14:00:00",
-    "hc_inicio": "12:00:00",
+    "email": "info@museoamano.org",#email ->25
+    "estacionamiento": True,#estacionamiento ->20
+    "ha_fin": "17:00:00",#ha_fin ->5
+    "ha_inicio": "10:00:00",#ha_inicio ->4
+    "hc_fin": "14:00:00",#hc_fin ->7
+    "hc_inicio": "12:00:00",#hc_inicio ->6
     "id_distrito": 9,
-    "id_museo": 1,
-    "n_atracciones_prox": 295,
-    "n_restaurantes_prox": 2229,
+    "id_museo": 1,#id_museo ->1
+    "n_atracciones_prox": 295,#n_atracciones_prox ->23
+    "n_restaurantes_prox": 2229,#n_restaurantes_prox ->22
     "nombre": "Museo Textil Precolombino: AMANO",
     "notas": None,
-    "pag_facebook": "",
-    "pag_instagram": "https://www.instagram.com/museoamano/",
-    "pag_tiktok": "https://www.tiktok.com/@museoamano",
-    "permiso_foto": True,
-    "puntaje_resena": "4.7",
-    "reserva_entrada": False,
-    "servicio_biblioteca": False,
-    "servicio_cafeteria": True,
-    "servicio_guiado": True,
-    "servicio_restaurante": True,
-    "sitio_web": "www.museoamano.org",
-    "tarifa_ancianos": "25.00",
-    "tarifa_discapacitados": "35.00",
-    "tarifa_ninos": "15.00",
-    "tarifa_normal": "35.00",
-    "telefono": "4412909",
-    "venta_objetos": True,
-    "visita_virtual": False
+    "pag_facebook": "",#pag_facebook ->27
+    "pag_instagram": "https://www.instagram.com/museoamano/",#pag_instagram ->28
+    "pag_tiktok": "https://www.tiktok.com/@museoamano",#pag_tiktok ->29
+    "permiso_foto": True,#permiso_foto ->19
+    "puntaje_resena": "4.7",#puntaje_resena ->3
+    "reserva_entrada": False,#reserva_entrada ->12
+    "servicio_biblioteca": False,#servicio_biblioteca ->16
+    "servicio_cafeteria": True,#servicio_cafeteria ->14
+    "servicio_guiado": True,#servicio_guiado ->15
+    "servicio_restaurante": True,#servicio_restaurante ->13
+    "sitio_web": "www.museoamano.org",#sitio_web ->26
+    "tarifa_ancianos": "25.00",#tarifa_ancianos ->10
+    "tarifa_discapacitados": "35.00",#tarifa_discapacitados ->11
+    "tarifa_ninos": "15.00",#tarifa_ninos ->9
+    "tarifa_normal": "35.00",#tarifa_normal ->8
+    "telefono": "4412909",#telefono ->24
+    "venta_objetos": True,#venta_objetos ->17
+    "visita_virtual": False#visita_virtual ->21
 }
 
 # Extraer y convertir los valores de ha_fin, ha_inicio, hc_fin, hc_inicio
@@ -71,7 +71,41 @@ boolean_keys = [
 for key in boolean_keys:
     data[key] = "TRUE" if data[key] else "FALSE"
 
-# Convertir el diccionario en un arreglo de pares clave-valor
-data_array = list(data.items())
 
-print(data_array)
+# Crear un nuevo diccionario con las claves en el orden especificado
+ordered_data = {
+    "id_museo": data["id_museo"],  # 1
+    "distrito": data["distrito"]["nombre"],  # 2
+    "puntaje_resena": data["puntaje_resena"],  # 3
+    "ha_inicio": data["ha_inicio"],  # 4
+    "ha_fin": data["ha_fin"],  # 5
+    "hc_inicio": data["hc_inicio"],  # 6
+    "hc_fin": data["hc_fin"],  # 7
+    "tarifa_normal": data["tarifa_normal"],  # 8
+    "tarifa_ninos": data["tarifa_ninos"],  # 9
+    "tarifa_ancianos": data["tarifa_ancianos"],  # 10
+    "tarifa_discapacitados": data["tarifa_discapacitados"],  # 11
+    "reserva_entrada": data["reserva_entrada"],  # 12
+    "servicio_restaurante": data["servicio_restaurante"],  # 13
+    "servicio_cafeteria": data["servicio_cafeteria"],  # 14
+    "servicio_guiado": data["servicio_guiado"],  # 15
+    "servicio_biblioteca": data["servicio_biblioteca"],  # 16
+    "venta_objetos": data["venta_objetos"],  # 17
+    "accesibilidad": data["accesibilidad"],  # 18
+    "permiso_foto": data["permiso_foto"],  # 19
+    "estacionamiento": data["estacionamiento"],  # 20
+    "visita_virtual": data["visita_virtual"],  # 21
+    "n_restaurantes_prox": data["n_restaurantes_prox"],  # 22
+    "n_atracciones_prox": data["n_atracciones_prox"],  # 23
+    "telefono": data["telefono"],  # 24
+    "email": data["email"],  # 25
+    "sitio_web": data["sitio_web"],  # 26
+    "pag_facebook": data["pag_facebook"],  # 27
+    "pag_instagram": data["pag_instagram"],  # 28
+    "pag_tiktok": data["pag_tiktok"]  # 29
+}
+
+# Convertir el nuevo diccionario en un arreglo de pares clave-valor
+ordered_data_array = list(ordered_data.items())
+
+print(ordered_data_array)

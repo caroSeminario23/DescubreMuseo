@@ -1,7 +1,7 @@
 def capturar_preferencias():
-    print("\n==============================================================================")
+    print("\n=============================================================================")
     print("**----Bienvenido a DescubreMuseo: El sistema de recomendación de museos---**")
-    print("==============================================================================")
+    print("=============================================================================")
     print("\nPor favor, complete el siguiente cuestionario (24 preguntas) para obtener recomendaciones personalizadas")
     
     # Capturamos las preferencias del usuario
@@ -658,6 +658,6 @@ def opciones_cantidad_atracciones_cerca():
     return cantidad_atracciones[opcion]
 
 
-# Ejemplo de uso
+'''# Ejemplo de uso
 preferencias_usuario = capturar_preferencias()
-print("Preferencias capturadas:", preferencias_usuario)
+print("Preferencias capturadas:", preferencias_usuario)'''

@@ -1,4 +1,3 @@
-; 1. PLANTILLAS
 (deftemplate preferencias_usuario
     (slot distrito_especificado)
     (slot dia_especificado)

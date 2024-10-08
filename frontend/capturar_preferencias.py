@@ -182,8 +182,8 @@ def opciones_dia():
 
 def opciones_hora():
     horas = {
-        '1': '8:00',
-        '2': '9:00',
+        '1': '08:00',
+        '2': '09:00',
         '3': '10:00',
         '4': '11:00',
         '5': '12:00',
@@ -212,7 +212,7 @@ def opciones_hora():
 
     # Guardar el número de la opción seleccionada. Por ejemplo: Si se tiene '10:00', se guarda 10
     if horas[opcion] != 'No relevante':
-        horas[opcion] = f'"{horas[opcion][:2]}"'
+        horas[opcion] = str(int(horas[opcion][:2]))
     else:
         horas[opcion] = 'No_relevante'
 
@@ -273,10 +273,12 @@ def opciones_concurrencia():
 
 def opciones_tarifa():
     tarifas = {
-        '1': 'Baja',
-        '2': 'Media',
-        '3': 'Alta',
-        '4': 'No relevante'
+        '1': 'Nula',
+        '2': 'Barata',
+        '3': 'Media',
+        '4': 'Alta',
+        '5': 'Muy alta',
+        '6': 'No relevante'
     }
     
     print("Seleccione una tarifa:")
@@ -432,7 +434,7 @@ def opciones_reserva():
         opcion = input("Ingrese el número de su elección: ")
         
     #Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if reservas[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if reservas[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_estacionamiento():
@@ -453,7 +455,7 @@ def opciones_estacionamiento():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if estacionamientos[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if estacionamientos[opcion] == 'Si' else 'No_relevante'
     
 
 def opciones_venta_objetos():
@@ -474,7 +476,7 @@ def opciones_venta_objetos():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if venta_objetos[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if venta_objetos[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_permiso_foto():
@@ -495,7 +497,7 @@ def opciones_permiso_foto():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if permiso_foto[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if permiso_foto[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_accesibilidad():
@@ -516,7 +518,7 @@ def opciones_accesibilidad():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if accesibilidad[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if accesibilidad[opcion] == 'Si' else 'No_relevante'
 
     
 def opciones_servicio_guiado():
@@ -537,7 +539,7 @@ def opciones_servicio_guiado():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if servicio_guiado[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if servicio_guiado[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_visita_virtual():
@@ -558,7 +560,7 @@ def opciones_visita_virtual():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if visita_virtual[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if visita_virtual[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_servicio_biblioteca():
@@ -579,7 +581,7 @@ def opciones_servicio_biblioteca():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if servicio_biblioteca[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if servicio_biblioteca[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_presencia_redes_sociales():
@@ -642,12 +644,12 @@ def opciones_sitio_web():
         opcion = input("Ingrese el número de su elección: ")
 
     # Retornar Retornar Relevante si la opción es 1, No relevante si la opción es 2
-    return 'Relevante' if sitios_web[opcion] == 'Si' else 'No_relevante'
+    return 'TRUE' if sitios_web[opcion] == 'Si' else 'No_relevante'
 
 
 def opciones_cantidad_restaurantes_cerca():
     restaurantes = {
-        '1': 'Ningun',
+        '1': 'Ninguno',
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
@@ -671,14 +673,14 @@ def opciones_cantidad_restaurantes_cerca():
         restaurantes[opcion] = f'"{restaurantes[opcion]}"'
     else:
         restaurantes[opcion] = 'No_relevante'
-        
+
     # Retornar el nombre de la categoría seleccionada
     return restaurantes[opcion]
 
 
 def opciones_cantidad_atracciones_cerca():
     cantidad_atracciones = {
-        '1': 'Ningun',
+        '1': 'Ninguno',
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
@@ -696,10 +698,17 @@ def opciones_cantidad_atracciones_cerca():
     while opcion not in cantidad_atracciones.keys():
         print("Opción inválida. Por favor, ingrese una opción válida.")
         opcion = input("Ingrese el número de su elección: ")
+
+    # Agregar comillas dobles a la opción seleccionada
+    if cantidad_atracciones[opcion] != 'No relevante':
+        cantidad_atracciones[opcion] = f'"{cantidad_atracciones[opcion]}"'
+    else:
+        cantidad_atracciones[opcion] = 'No_relevante'
+
     # Retornar el nombre de la cantidad de atracciones seleccionada
     return cantidad_atracciones[opcion]
 
 
-'''# Ejemplo de uso
-preferencias_usuario = capturar_preferencias()
-print("Preferencias capturadas:", preferencias_usuario)'''
+# Ejemplo de uso
+#preferencias_usuario = capturar_preferencias()
+#print("Preferencias capturadas:", preferencias_usuario)

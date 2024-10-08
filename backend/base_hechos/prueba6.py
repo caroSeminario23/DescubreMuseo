@@ -4,7 +4,7 @@ import clips
 env = clips.Environment()
 
 # Cargar la plantilla desde un archivo externo
-plantilla_path = "C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_hechos/plantilla.clp"
+plantilla_path = "C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_conocimiento/templates/preferencias_usuario.clp"
 try:
     env.load(plantilla_path)
     print("Plantilla cargada con éxito.")
@@ -19,7 +19,7 @@ for template in env.templates():
         print(f"  Slot: {slot.name}")
 
 # Cargar el hecho desde un archivo externo
-hechos_path = "C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_hechos/hecho.clp"
+hechos_path = "C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_hechos/hecho2.clp"
 try:
     env.load(hechos_path)
     print("Hechos cargados con éxito.")

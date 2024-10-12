@@ -91,9 +91,9 @@
     (slot pag_facebook)
     (slot pag_instagram)
     (slot pag_tiktok)
-    (slot categoria)
-    (slot dia_atencion)
-    (slot dia_concurrido)
+    (multislot categoria)
+    (multislot dia_atencion)
+    (multislot dia_concurrido)
 )
 
 (deftemplate recomendacion

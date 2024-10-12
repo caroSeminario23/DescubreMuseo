@@ -31,7 +31,7 @@
             (pag_instagram true)
             (pag_tiktok true)
             (categoria "Arte")
-            (dia_atencion "Martes" "MiÃ©rcoles" "Jueves" "Viernes" "Domingo")
+            (dia_atencion "Martes" "Miércoles" "Jueves" "Viernes" "Domingo")
             (dia_concurrido )
         )
     )

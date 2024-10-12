@@ -43,20 +43,24 @@ def cargar_regla_general(env):
 
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
-    hechos_path = "C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_hechos/hecho2.clp"
+    hechos_path = "backend/base_hechos/preferencia_usuario.clp"
     try:
         env.load(hechos_path)
-        print("Hechos cargados con éxito.")
+        print("Hecho de preferencias de usuario cargado con éxito.")
     except Exception as e:
         print(f"Error al cargar hechos: {e}")
 
 def cargar_hechos_museos(env):
-    ids = range(1,40)
+    ids = range(1, 2) #Hasta 40
     # Cargar varios hechos identificados por su ID
     for id in ids:
-        hechos_path = f"C:/Users/carolina/Documents/VS Code/DescubreMuseo/backend/base_hechos/hecho{id}.clp"
+        hechos_path = f"backend/base_hechos/hechos_museos/museo_{id}.clp"
         try:
             env.load(hechos_path)
-            print(f"Hecho {id} cargado con éxito.")
+            print(f"Hecho de museo {id} cargado con éxito.")
         except Exception as e:
             print(f"Error al cargar hecho {id}: {e}")
+
+
+if __name__ == '__main__':
+    cargar_clips()

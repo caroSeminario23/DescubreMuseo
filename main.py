@@ -1,5 +1,7 @@
 from frontend.capturar_preferencias import capturar_preferencias
 from frontend.guardar_preferencias import generar_hecho_preferencia_clips, guardar_hecho_preferencia_clips
+from backend.procesamiento.hechos_todos_museos import convertir_museos_hechos
+from backend.procesamiento.cargar_reglas_hechos import cargar_clips
 
 # Ejemplo de uso
 preferencias_usuario = capturar_preferencias()
@@ -16,4 +18,13 @@ hecho_clips = generar_hecho_preferencia_clips(preferencias_usuario)
 # Guardar el hecho en un archivo .clp
 guardar_hecho_preferencia_clips(hecho_clips)
 print("\nHecho guardado correctamente")
+
+# Convertir los museos en hechos
+convertir_museos_hechos()
+
+# Cargar los hechos y reglas en CLIPS
+env = cargar_clips()
+
+# Ejecutar el motor de inferencia
+env.run()
 

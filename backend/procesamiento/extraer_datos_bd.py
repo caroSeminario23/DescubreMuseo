@@ -73,7 +73,7 @@ def extraer_json_por_museo(id_museo):
     url = "http://localhost:5000"
     extraccion = ExtraccionDatos(url)
 
-    museo = extraccion.obtener_museo(id_museo)
+    data_museo = extraccion.obtener_museo(id_museo)
     categorias = []
     dias_atencion = []
     dias_concurridos = []
@@ -124,7 +124,7 @@ def extraer_json_por_museo(id_museo):
         "Domingo": "Domingo" in dias_concurridos
     }
     
-    return museo, data_categorias, data_dia_atencion, data_dia_concurrido
+    return data_museo, data_categorias, data_dia_atencion, data_dia_concurrido
 
 def main():
     id_museo = 2
@@ -135,17 +135,17 @@ def main():
     print(data_dia_concurrido)
 
     # Guardar en archivos JSON
-    with open('backend/procesamiento/archivos_JSON/data_museo.json', 'w') as file:
-        json.dump(data_museo, file, indent=4)
+    with open('backend/procesamiento/archivos_JSON/data_museo.json', 'w', encoding='utf-8') as file:
+        json.dump(data_museo, file, indent=4, ensure_ascii=False)
 
-    with open('backend/procesamiento/archivos_JSON/data_categorias.json', 'w') as file:
-        json.dump(data_categorias, file, indent=4)
+    with open('backend/procesamiento/archivos_JSON/data_categorias.json', 'w', encoding='utf-8') as file:
+        json.dump(data_categorias, file, indent=4, ensure_ascii=False)
 
-    with open('backend/procesamiento/archivos_JSON/data_dia_atencion.json', 'w') as file:
-        json.dump(data_dia_atencion, file, indent=4)
+    with open('backend/procesamiento/archivos_JSON/data_dia_atencion.json', 'w', encoding='utf-8') as file:
+        json.dump(data_dia_atencion, file, indent=4, ensure_ascii=False)
 
-    with open('backend/procesamiento/archivos_JSON/data_dia_concurrido.json', 'w') as file:
-        json.dump(data_dia_concurrido, file, indent=4)
+    with open('backend/procesamiento/archivos_JSON/data_dia_concurrido.json', 'w', encoding='utf-8') as file:
+        json.dump(data_dia_concurrido, file, indent=4, ensure_ascii=False)
 
     print("Datos guardados correctamente")
 

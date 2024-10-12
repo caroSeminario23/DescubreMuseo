@@ -3,16 +3,16 @@ from procesamiento_museo import procesar_datos
 
 def simplificar_un_museo():
     # Leer los archivos JSON
-    with open('backend/procesamiento/archivos_JSON/data_museo.json', 'r') as file:
+    with open('backend/procesamiento/archivos_JSON/data_museo.json', 'r', encoding='utf-8') as file:
         data_museo = json.load(file)
 
-    with open('backend/procesamiento/archivos_JSON/data_categorias.json', 'r') as file:
+    with open('backend/procesamiento/archivos_JSON/data_categorias.json', 'r', encoding='utf-8') as file:
         data_categorias = json.load(file)
 
-    with open('backend/procesamiento/archivos_JSON/data_dia_atencion.json', 'r') as file:
+    with open('backend/procesamiento/archivos_JSON/data_dia_atencion.json', 'r', encoding='utf-8') as file:
         data_dia_atencion = json.load(file)
 
-    with open('backend/procesamiento/archivos_JSON/data_dia_concurrido.json', 'r') as file:
+    with open('backend/procesamiento/archivos_JSON/data_dia_concurrido.json', 'r', encoding='utf-8') as file:
         data_dia_concurrido = json.load(file)
 
     # Crear diccionarios para cada archivo JSON

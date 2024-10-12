@@ -68,8 +68,19 @@ def procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
     # Extraer y convertir los valores de ha_fin, ha_inicio, hc_fin, hc_inicio
     data["ha_fin"] = int(data["ha_fin"][:2])
     data["ha_inicio"] = int(data["ha_inicio"][:2])
-    data["hc_fin"] = int(data["hc_fin"][:2])
-    data["hc_inicio"] = int(data["hc_inicio"][:2])
+
+    if data["hc_fin"] is not None:
+        data["hc_fin"] = int(data["hc_fin"][:2])
+    else:
+        data["hc_fin"] = "No_definido"
+
+    if data["hc_inicio"] is not None:
+        data["hc_inicio"] = int(data["hc_inicio"][:2])
+    else:
+        data["hc_inicio"] = "No_definido"
+
+    #data["hc_fin"] = int(data["hc_fin"][:2])
+    #data["hc_inicio"] = int(data["hc_inicio"][:2])
 
     # Convertir los valores de email, pag_facebook, pag_instagram, pag_tiktok, sitio_web a booleanos en mayúsculas
     data["email"] = "TRUE" if data["email"] else "FALSE"
@@ -81,10 +92,36 @@ def procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
 
     # Convertir los valores de puntaje_resena, tarifa_ancianos, tarifa_discapacitados, tarifa_ninos, tarifa_normal a float
     data["puntaje_resena"] = float(data["puntaje_resena"])
-    data["tarifa_ancianos"] = float(data["tarifa_ancianos"])
-    data["tarifa_discapacitados"] = float(data["tarifa_discapacitados"])
-    data["tarifa_ninos"] = float(data["tarifa_ninos"])
+
+    if data["tarifa_ancianos"] is not None:
+        data["tarifa_ancianos"] = float(data["tarifa_ancianos"])
+    else:
+        data["tarifa_ancianos"] = "No_definido"
+
+    if data["tarifa_ninos"] is not None:
+        data["tarifa_ninos"] = float(data["tarifa_ninos"])
+    else:
+        data["tarifa_ninos"] = "No_definido"
+
+    if data["tarifa_discapacitados"] is not None:
+        data["tarifa_discapacitados"] = float(data["tarifa_discapacitados"])
+    else:
+        data["tarifa_discapacitados"] = "No_definido"
+
+    #data["tarifa_ancianos"] = float(data["tarifa_ancianos"])
+    #data["tarifa_discapacitados"] = float(data["tarifa_discapacitados"])
+    #data["tarifa_ninos"] = float(data["tarifa_ninos"])
     data["tarifa_normal"] = float(data["tarifa_normal"])
+
+    if data["n_restaurantes_prox"] is not None:
+        data["n_restaurantes_prox"] = int(data["n_restaurantes_prox"])
+    else:
+        data["n_restaurantes_prox"] = "No_definido"
+
+    if data["n_atracciones_prox"] is not None:
+        data["n_atracciones_prox"] = int(data["n_atracciones_prox"])
+    else:
+        data["n_atracciones_prox"] = "No_definido"
 
     # Convertir los valores booleanos especificados a cadenas en mayúsculas
     boolean_keys = [
@@ -139,7 +176,12 @@ def procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
 
     # Agregar los días concurridos con valor True al nuevo diccionario
     dias_concurrido_true = [key for key, value in data_dia_concurrido.items() if value]
-    ordered_data["dia_concurrido"] =" ".join([f'"{dia}"' for dia in dias_concurrido_true])
+    
+    if dias_concurrido_true == []:
+        ordered_data["dia_concurrido"] = "No_definido"
+    else:
+        ordered_data["dia_concurrido"] =" ".join([f'"{dia}"' for dia in dias_concurrido_true])
+    #ordered_data["dia_concurrido"] =" ".join([f'"{dia}"' for dia in dias_concurrido_true])
 
 
     return ordered_data

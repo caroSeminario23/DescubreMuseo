@@ -32,7 +32,7 @@ def generar_hecho_preferencia_clips(preferencias):
     """
     return hecho_clips
 
-def guardar_hecho_preferencia_clips(hecho_clips, archivo='backend/base_hechos/hecho2.clp'):
+def guardar_hecho_preferencia_clips(hecho_clips, archivo='backend/base_hechos/preferencia_usuario.clp'):
     with open(archivo, 'w', encoding='utf-8') as file:
         file.write(hecho_clips)
     print(f"\nHecho guardado en {archivo}")

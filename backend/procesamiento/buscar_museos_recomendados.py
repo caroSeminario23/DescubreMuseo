@@ -22,7 +22,7 @@ def obtener_museos_recomendados(id_museos_recomendados):
 #Mostrar la información básica de los museos recomendados
 def mostrar_informacion_basica(id_museos_recomendados):
     museos_info = obtener_museos_recomendados(id_museos_recomendados)
-    print("Información básica de los museos recomendados:")
+    print("\nInformación básica de los museos recomendados:")
     for museo in museos_info:
         print(museo)
 

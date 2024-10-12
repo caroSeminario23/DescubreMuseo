@@ -1,5 +1,4 @@
 # Recoger los datos generados por CLIPS
-
 def recoger_recomendaciones(env):
     id_museos_recomendados = []
     for fact in env.facts():

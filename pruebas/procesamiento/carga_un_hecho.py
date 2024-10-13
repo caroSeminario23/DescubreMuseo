@@ -31,7 +31,7 @@ def cargar_reglas_intermedias(env):
 
 def cargar_regla_general(env):
     # Cargar la regla general desde un archivo externo
-    regla_general_path = "pruebas/reglas/regla_a_prueba2.clp"
+    regla_general_path = "pruebas/reglas/regla_a_prueba3.clp"
     try:
         env.load(regla_general_path)
         print("Regla general cargada con éxito.")

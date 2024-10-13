@@ -1,7 +1,7 @@
 
     (deffacts inicial
         (preferencias_usuario
-            (distrito_especificado "Callao")
+            (distrito_especificado "Cercado de Lima")
             (dia_especificado Martes)
             (hora_especificada 15)
             (categoria_especificada Histórico)
@@ -15,7 +15,7 @@
             (reserva_usuario No_relevante)
             (estacionamiento_usuario No_relevante)
             (venta_objetos_usuario No_relevante)
-            (permiso_foto_usuario TRUE)
+            (permiso_foto_usuario No_relevante)
             (accesibilidad_usuario No_relevante)
             (servicio_guiado_usuario No_relevante)
             (visita_virtual_usuario No_relevante)
@@ -24,7 +24,7 @@
             (existencia_medios_comunicacion Relevante)
             (sitio_web_existe No_relevante)
             (cantidad_rest_cerca "Pocos")
-            (cantidad_atrac_cerca "Pocos")
+            (cantidad_atrac_cerca "Muchos")
         )
     )
     

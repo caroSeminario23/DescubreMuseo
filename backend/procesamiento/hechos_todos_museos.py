@@ -4,7 +4,7 @@ from .convertir_museo_hecho import generar_hecho_museo_clips, guardar_hecho_muse
 from flask import json
 
 def convertir_museos_hechos():
-    for i in range(1, 5): # Hasta 40
+    for i in range(5, 40): # Hasta 40
         data_museo, data_categorias, data_dia_atencion, data_dia_concurrido = extraer_json_por_museo(i)
         print(data_museo)
         print(data_categorias)

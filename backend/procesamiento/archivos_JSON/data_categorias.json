@@ -1,6 +1,6 @@
 {
     "Temático": false,
-    "Arqueológico": false,
-    "Arte": true,
+    "Arqueológico": true,
+    "Arte": false,
     "Histórico": false
 }

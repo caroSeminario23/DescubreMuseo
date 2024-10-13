@@ -1,7 +1,7 @@
 
     (deffacts museo_datos
         (museo
-            (id_museo 2)
+            (id_museo 4)
             (distrito "Barranco")
             (puntaje_resena 4.3)
             (ha_inicio 10)
@@ -30,9 +30,9 @@
             (pag_facebook TRUE)
             (pag_instagram TRUE)
             (pag_tiktok TRUE)
-            (categoria "Arte")
-            (dia_atencion "Martes" "Miércoles" "Jueves" "Viernes" "Domingo")
-            (dia_concurrido No_relevante)
+            (categoria Arte Caramelito)
+            (dia_atencion Martes Miércoles Domingo)
+            (dia_concurrido Martes Domingo)
         )
     )
     

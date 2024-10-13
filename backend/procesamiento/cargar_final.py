@@ -4,10 +4,10 @@ import clips
 def cargar_clips():
     env = clips.Environment()
     cargar_templates(env)
-    cargar_reglas_intermedias(env)
     cargar_regla_general(env)
     cargar_hechos_museos(env)
     cargar_hechos_preferencias_usuario(env)
+    cargar_hechos_intermedios(env)
     env.reset() # Resetear el entorno para asegurar que los deffacts se apliquen
     return env
 
@@ -20,16 +20,6 @@ def cargar_templates(env):
         print("Plantilla cargada con éxito.")
     except Exception as e:
         print(f"Error al cargar plantilla: {e}")
-
-#backend/base_conocimiento/rules/reglas_intermedias.clp
-def cargar_reglas_intermedias(env):
-    # Cargar las reglas intermedias desde un archivo externo
-    reglas_intermedias_path = "backend/base_conocimiento/rules/reglas_intermedias.clp"
-    try:
-        env.load(reglas_intermedias_path)
-        print("Reglas intermedias cargadas con éxito.")
-    except Exception as e:
-        print(f"Error al cargar reglas intermedias: {e}")
 
 #backend/base_conocimiento/rules/regla_general.clp
 def cargar_regla_general(env):
@@ -61,6 +51,14 @@ def cargar_hechos_museos(env):
         except Exception as e:
             print(f"Error al cargar hecho {id}: {e}")
 
+def cargar_hechos_intermedios(env):
+    # Cargar el hecho desde un archivo externo
+    hechos_path = "backend/base_hechos/hechos_intermedios.clp"
+    try:
+        env.load(hechos_path)
+        print("Hecho de intermedios cargado con éxito.")
+    except Exception as e:
+        print(f"Error al cargar hechos intermedios: {e}")
 
 if __name__ == '__main__':
     env = cargar_clips()
@@ -68,20 +66,10 @@ if __name__ == '__main__':
     print("\n\n\nHechos antes de ejecucion:")
     for fact in env.facts():
         print(fact)
-    env.run()
+
     env.run()
 
     # Imprimir los hechos
     print("\nHechos despues de ejecucion:")
     for fact in env.facts():
         print(fact)
-    
-    #cargar_hechos_preferencias_usuario(env)
-    #env.reset()
-    #env.run()
-'''    # Resetear el entorno
-    env.reset()
-    # Imprimir los hechos
-    print("\nHechos :")
-    for fact in env.facts():
-        print(fact)'''

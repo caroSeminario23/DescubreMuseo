@@ -5,10 +5,10 @@ def cargar_clips():
     env = clips.Environment()
     cargar_templates(env)
     cargar_reglas_intermedias(env)
-    cargar_regla_general(env)
-    cargar_hechos_museos(env)
     cargar_hechos_preferencias_usuario(env)
     env.reset() # Resetear el entorno para asegurar que los deffacts se apliquen
+    env.run()
+    guardar_hechos(env, "backend/base_hechos/hechos_intermedios.clp")
     return env
 
 #backend/base_conocimiento/templates/completo.clp
@@ -31,16 +31,6 @@ def cargar_reglas_intermedias(env):
     except Exception as e:
         print(f"Error al cargar reglas intermedias: {e}")
 
-#backend/base_conocimiento/rules/regla_general.clp
-def cargar_regla_general(env):
-    # Cargar la regla general desde un archivo externo
-    regla_general_path = "backend/base_conocimiento/rules/regla_general.clp"
-    try:
-        env.load(regla_general_path)
-        print("Regla general cargada con éxito.")
-    except Exception as e:
-        print(f"Error al cargar regla general: {e}")
-
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
     hechos_path = "backend/base_hechos/preferencia_usuario.clp"
@@ -50,38 +40,25 @@ def cargar_hechos_preferencias_usuario(env):
     except Exception as e:
         print(f"Error al cargar hechos: {e}")
 
-def cargar_hechos_museos(env):
-    ids = range(1, 3) #Hasta 40
-    # Cargar varios hechos identificados por su ID
-    for id in ids:
-        hechos_path = f"backend/base_hechos/hechos_museos/museo_{id}.clp"
-        try:
-            env.load(hechos_path)
-            print(f"Hecho de museo {id} cargado con éxito.")
-        except Exception as e:
-            print(f"Error al cargar hecho {id}: {e}")
-
+def guardar_hechos(env, file_path):
+    # Obtener todos los hechos del entorno
+    hechos = env.facts()
+    with open(file_path, 'w') as file:
+        file.write("(deffacts hechos_guardados\n")
+        for hecho in hechos:
+            file.write(f"  {hecho}\n")
+        file.write(")\n")
+    print(f"Hechos guardados en {file_path}")
 
 if __name__ == '__main__':
     env = cargar_clips()
 
-    print("\n\n\nHechos antes de ejecucion:")
+    '''print("\n\n\nHechos antes de ejecucion:")
     for fact in env.facts():
         print(fact)
-    env.run()
-    env.run()
+    env.run()'''
 
     # Imprimir los hechos
-    print("\nHechos despues de ejecucion:")
+    print("\n\n\nHechos despues de ejecucion:")
     for fact in env.facts():
         print(fact)
-    
-    #cargar_hechos_preferencias_usuario(env)
-    #env.reset()
-    #env.run()
-'''    # Resetear el entorno
-    env.reset()
-    # Imprimir los hechos
-    print("\nHechos :")
-    for fact in env.facts():
-        print(fact)'''

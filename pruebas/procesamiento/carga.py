@@ -11,39 +11,36 @@ def cargar_clips():
     env.reset() # Resetear el entorno para asegurar que los deffacts se apliquen
     return env
 
-#backend/base_conocimiento/templates/completo.clp
 def cargar_templates(env):
     # Cargar la plantilla desde un archivo externo
-    plantilla_path = "backend/base_conocimiento/templates/completo.clp"
+    plantilla_path = "pruebas/templates/completo.clp"
     try:
         env.load(plantilla_path)
         print("Plantilla cargada con éxito.")
     except Exception as e:
         print(f"Error al cargar plantilla: {e}")
 
-#backend/base_conocimiento/rules/reglas_intermedias.clp
-def cargar_reglas_intermedias(env):
-    # Cargar las reglas intermedias desde un archivo externo
-    reglas_intermedias_path = "backend/base_conocimiento/rules/reglas_intermedias.clp"
-    try:
-        env.load(reglas_intermedias_path)
-        print("Reglas intermedias cargadas con éxito.")
-    except Exception as e:
-        print(f"Error al cargar reglas intermedias: {e}")
-
-#backend/base_conocimiento/rules/regla_general.clp
 def cargar_regla_general(env):
     # Cargar la regla general desde un archivo externo
-    regla_general_path = "backend/base_conocimiento/rules/regla_general.clp"
+    regla_general_path = "pruebas/reglas/regla_a_prueba2.clp"
     try:
         env.load(regla_general_path)
         print("Regla general cargada con éxito.")
     except Exception as e:
         print(f"Error al cargar regla general: {e}")
 
+def cargar_reglas_intermedias(env):
+    # Cargar las reglas intermedias desde un archivo externo
+    reglas_intermedias_path = "pruebas/reglas/reglas_intermedias.clp"
+    try:
+        env.load(reglas_intermedias_path)
+        print("Reglas intermedias cargadas con éxito.")
+    except Exception as e:
+        print(f"Error al cargar reglas intermedias: {e}")
+
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
-    hechos_path = "backend/base_hechos/preferencia_usuario.clp"
+    hechos_path = "pruebas/hechos/preferencia_usuario.clp"
     try:
         env.load(hechos_path)
         print("Hecho de preferencias de usuario cargado con éxito.")
@@ -51,37 +48,33 @@ def cargar_hechos_preferencias_usuario(env):
         print(f"Error al cargar hechos: {e}")
 
 def cargar_hechos_museos(env):
-    ids = range(1, 3) #Hasta 40
+    ids = range(2, 4) #Hasta 40
     # Cargar varios hechos identificados por su ID
     for id in ids:
-        hechos_path = f"backend/base_hechos/hechos_museos/museo_{id}.clp"
+        hechos_path = f"pruebas/hechos2/museo_{id}.clp"
         try:
             env.load(hechos_path)
             print(f"Hecho de museo {id} cargado con éxito.")
+            
+            for fact in env.facts():
+                print(fact)
+            print("===============================")
         except Exception as e:
             print(f"Error al cargar hecho {id}: {e}")
+    #env.reset()
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     env = cargar_clips()
 
-    print("\n\n\nHechos antes de ejecucion:")
+    print("\n\nHechos antes de ejecucion:")
     for fact in env.facts():
         print(fact)
-    env.run()
+    print("===============================")
+
     env.run()
 
     # Imprimir los hechos
-    print("\nHechos despues de ejecucion:")
+    print("\n\nHechos despues de ejecucion:")
     for fact in env.facts():
         print(fact)
-    
-    #cargar_hechos_preferencias_usuario(env)
-    #env.reset()
-    #env.run()
-'''    # Resetear el entorno
-    env.reset()
-    # Imprimir los hechos
-    print("\nHechos :")
-    for fact in env.facts():
-        print(fact)'''
+    print("===============================")

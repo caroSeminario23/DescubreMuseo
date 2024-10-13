@@ -1,10 +1,10 @@
-from extraer_datos_bd import extraer_json_por_museo
-from simplificar_museo import simplificar_un_museo
-from convertir_museo_hecho import generar_hecho_museo_clips, guardar_hecho_museo_clipsID
+from .extraer_datos_bd import extraer_json_por_museo
+from .simplificar_museo import simplificar_un_museo
+from .convertir_museo_hecho import generar_hecho_museo_clips, guardar_hecho_museo_clipsID
 from flask import json
 
 def convertir_museos_hechos():
-    for i in range(1, 40): # Hasta 40
+    for i in range(1, 5): # Hasta 40
         data_museo, data_categorias, data_dia_atencion, data_dia_concurrido = extraer_json_por_museo(i)
         print(data_museo)
         print(data_categorias)
@@ -48,5 +48,5 @@ def convertir_museos_hechos():
 
     print("Proceso finalizado")
 
-if __name__ == '__main__':
-    convertir_museos_hechos()
+'''if __name__ == '__main__':
+    convertir_museos_hechos()'''

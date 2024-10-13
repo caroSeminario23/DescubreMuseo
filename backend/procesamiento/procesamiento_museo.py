@@ -189,13 +189,13 @@ def procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
 
     return ordered_data
 
-# Llamar a la función y mostrar el resultado
+'''# Llamar a la función y mostrar el resultado
 ordered_data = procesar_datos(data, data_categoria, data_dia_atencion, data_dia_concurrido)
 # Guardar el resultado en un archivo JSON
 with open('resultado.json', 'w', encoding='utf-8') as f:
     json.dump(ordered_data, f, ensure_ascii=False, indent=4)
 
-print("Datos guardados en resultado.json")
+print("Datos guardados en resultado.json")'''
 
 # Leer el archivo JSON y mostrar su contenido
 #with open('resultado.json', 'r', encoding='utf-8') as f:

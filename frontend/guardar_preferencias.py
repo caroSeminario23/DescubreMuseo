@@ -38,7 +38,7 @@ def guardar_hecho_preferencia_clips(hecho_clips, archivo='backend/base_hechos/pr
     print(f"\nHecho guardado en {archivo}")
 
 # Suponiendo que tienes el diccionario de preferencias
-preferencias = {
+'''preferencias = {
     'distrito_especificado': 'Lima',
     'dia_especificado': 'Lunes',
     'hora_especificada': '10:00',
@@ -70,3 +70,4 @@ hecho_clips = generar_hecho_preferencia_clips(preferencias)
 
 # Guardar el hecho en un archivo .clp
 guardar_hecho_preferencia_clips(hecho_clips)
+'''

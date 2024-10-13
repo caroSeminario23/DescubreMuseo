@@ -1,8 +1,8 @@
-from carga_un_hecho import cargar_clips
+from .carga_un_hecho import cargar_clips
 
 def identificar_recomendaciones():
     id_museos_recomendados = []
-    for i in range(1, 40):
+    for i in range(1, 7):
         # Cargar los clips
         env = cargar_clips(i)
 

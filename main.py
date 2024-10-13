@@ -5,7 +5,7 @@ from backend.procesamiento.cargar_reglas_hechos import cargar_clips
 from backend.procesamiento.identificar_recomendaciones import identificar_recomendaciones
 from backend.procesamiento.buscar_museos_recomendados import mostrar_opciones_museos_recomendados
 
-# Ejemplo de uso
+'''# Ejemplo de uso
 preferencias_usuario = capturar_preferencias()
 
 # Imprimir las preferencias capturadas por el usuario línea por línea si es que está guardado como un diccionario
@@ -22,12 +22,17 @@ guardar_hecho_preferencia_clips(hecho_clips)
 print("\nHecho guardado correctamente")
 
 # Convertir los museos en hechos
-convertir_museos_hechos()
+convertir_museos_hechos()'''
 
 # Cargar los hechos y reglas en CLIPS
 museos_recomendados = identificar_recomendaciones()
 
-# Imprimir los museos recomendados
-mostrar_opciones_museos_recomendados(museos_recomendados)
+if museos_recomendados == []:
+    print("No se encontraron museos recomendados")
+    print("Por favor, intenta con otras preferencias")
+    print("Gracias por usar nuestro sistema")
+else:
+    # Imprimir los museos recomendados
+    mostrar_opciones_museos_recomendados(museos_recomendados)
 
-print("\n\nProceso finalizado")
+    print("\n\nProceso finalizado")

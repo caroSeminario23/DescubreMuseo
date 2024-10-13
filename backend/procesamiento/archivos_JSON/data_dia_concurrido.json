@@ -1,9 +1,9 @@
 {
     "Lunes": false,
     "Martes": false,
-    "Miércoles": true,
-    "Jueves": true,
-    "Viernes": true,
+    "Miércoles": false,
+    "Jueves": false,
+    "Viernes": false,
     "Sábado": false,
     "Domingo": false
 }

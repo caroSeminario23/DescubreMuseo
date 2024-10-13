@@ -89,8 +89,8 @@ museo = {
     "dia_concurrido": ""
 }
 
-# Generar y guardar el hecho de CLIPS
+'''# Generar y guardar el hecho de CLIPS
 hecho_clips = generar_hecho_museo_clips(museo)
 
 # Guardar el hecho en un archivo
-guardar_hecho_museo_clips(hecho_clips)
+guardar_hecho_museo_clips(hecho_clips)'''

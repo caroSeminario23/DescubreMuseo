@@ -62,7 +62,7 @@ def cargar_hechos_museos(env):
             print(f"Error al cargar hecho {id}: {e}")
 
 
-if __name__ == '__main__':
+'''if __name__ == '__main__':
     env = cargar_clips()
 
     print("\n\n\nHechos antes de ejecucion:")
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     # Imprimir los hechos
     print("\nHechos despues de ejecucion:")
     for fact in env.facts():
-        print(fact)
+        print(fact)'''
     
     #cargar_hechos_preferencias_usuario(env)
     #env.reset()

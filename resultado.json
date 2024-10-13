@@ -28,7 +28,7 @@
     "pag_facebook": "FALSE",
     "pag_instagram": "TRUE",
     "pag_tiktok": "TRUE",
-    "categoria": "\"Tematico\" \"Arte\"",
-    "dia_atencion": "\"Lunes\" \"Martes\" \"Miercoles\" \"Jueves\"",
-    "dia_concurrido": "\"Lunes\" \"Martes\" \"Miercoles\" \"Jueves\""
+    "categoria": "Tematico Arte",
+    "dia_atencion": "Lunes Martes Miercoles Jueves",
+    "dia_concurrido": "Lunes Martes Miercoles Jueves"
 }

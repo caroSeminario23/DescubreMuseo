@@ -149,5 +149,5 @@ def main():
 
     print("Datos guardados correctamente")
 
-if __name__ == "__main__":
-    main()
+'''if __name__ == "__main__":
+    main()'''

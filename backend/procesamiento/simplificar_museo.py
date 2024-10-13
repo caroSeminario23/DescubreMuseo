@@ -1,5 +1,5 @@
 from flask import json
-from procesamiento_museo import procesar_datos
+from .procesamiento_museo import procesar_datos
 
 def simplificar_un_museo():
     # Leer los archivos JSON
@@ -33,5 +33,5 @@ def simplificar_un_museo():
 
     print("Datos guardados en museo_simplificado.json")
 
-if __name__ == "__main__":
-    simplificar_un_museo()
+'''if __name__ == "__main__":
+    simplificar_un_museo()'''

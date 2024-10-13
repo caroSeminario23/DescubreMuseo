@@ -13,7 +13,7 @@ def cargar_clips(id):
 
 def cargar_templates(env):
     # Cargar la plantilla desde un archivo externo
-    plantilla_path = "pruebas/templates/completo.clp"
+    plantilla_path = "backend/base_conocimiento/templates/completo.clp"
     try:
         env.load(plantilla_path)
         print("Plantilla cargada con éxito.")
@@ -22,7 +22,7 @@ def cargar_templates(env):
 
 def cargar_reglas_intermedias(env):
     # Cargar las reglas intermedias desde un archivo externo
-    reglas_intermedias_path = "pruebas/reglas/reglas_intermedias.clp"
+    reglas_intermedias_path = "backend/base_conocimiento/rules/reglas_intermedias.clp"
     try:
         env.load(reglas_intermedias_path)
         print("Reglas intermedias cargadas con éxito.")
@@ -31,7 +31,7 @@ def cargar_reglas_intermedias(env):
 
 def cargar_regla_general(env):
     # Cargar la regla general desde un archivo externo
-    regla_general_path = "pruebas/reglas/regla_a_prueba4.clp"
+    regla_general_path = "backend/base_conocimiento/rules/regla_general.clp"
     try:
         env.load(regla_general_path)
         print("Regla general cargada con éxito.")
@@ -40,7 +40,7 @@ def cargar_regla_general(env):
 
 def cargar_hecho_museo(env, id):
     # Cargar la regla general desde un archivo externo
-    hecho_path = f"pruebas/hechos2/museo_{id}.clp"
+    hecho_path = f"backend/base_hechos/hechos_museos/museo_{id}.clp"
     try:
         env.load(hecho_path)
         print(f"Hecho de museo {id} cargado con éxito.")
@@ -49,7 +49,7 @@ def cargar_hecho_museo(env, id):
 
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
-    hechos_path = "pruebas/hechos/preferencia_usuario.clp"
+    hechos_path = "backend/base_hechos/preferencia_usuario.clp"
     try:
         env.load(hechos_path)
         print("Hecho de preferencias de usuario cargado con éxito.")

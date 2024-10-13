@@ -122,8 +122,8 @@ def opciones_distritos():
         '10': 'Pueblo Libre',
         '11': 'San Borja',
         '12': 'San Isidro',
-        '13': 'Surco',
-        '14': 'No relevante'
+        '13': 'Surco'
+        #'14': 'No relevante'
     }
 
     print("Seleccione un distrito:")
@@ -155,8 +155,8 @@ def opciones_dia():
         '4': 'Jueves',
         '5': 'Viernes',
         '6': 'Sábado',
-        '7': 'Domingo',
-        '8': 'No relevante'
+        '7': 'Domingo'
+        #'8': 'No relevante'
     }
 
     print("Seleccione un día de la semana:")
@@ -172,7 +172,8 @@ def opciones_dia():
 
     # Agregar comillas dobles a la opción seleccionada
     if dias[opcion] != 'No relevante':
-        dias[opcion] = f'"{dias[opcion]}"'
+        dias[opcion] = dias[opcion]
+        #dias[opcion] = f'"{dias[opcion]}"'
     else:
         dias[opcion] = 'No_relevante'
 
@@ -195,8 +196,8 @@ def opciones_hora():
         '11': '18:00',
         '12': '19:00',
         '13': '20:00',
-        '14': '21:00',
-        '15': 'No relevante'
+        '14': '21:00'
+        #'15': 'No relevante'
     }
 
     print("Seleccione una hora:")
@@ -225,8 +226,8 @@ def opciones_categoria():
         '1': 'Tématico',
         '2': 'Arqueológico',
         '3': 'Arte',
-        '4': 'Histórico',
-        '5': 'No relevante'
+        '4': 'Histórico'
+        #'5': 'No relevante'
     }
 
     print("Seleccione una categoría de museo:")
@@ -242,7 +243,8 @@ def opciones_categoria():
         
     # Agregar comillas dobles a la opción seleccionada
     if categorias[opcion] != 'No relevante':
-        categorias[opcion] = f'"{categorias[opcion]}"'
+        categorias[opcion] = categorias[opcion]
+        #categorias[opcion] = f'"{categorias[opcion]}"'
     else:
         categorias[opcion] = 'No_relevante'
 
@@ -277,8 +279,8 @@ def opciones_tarifa():
         '2': 'Barata',
         '3': 'Media',
         '4': 'Alta',
-        '5': 'Muy alta',
-        '6': 'No relevante'
+        '5': 'Muy alta'
+        #'6': 'No relevante'
     }
     
     print("Seleccione una tarifa:")
@@ -307,8 +309,8 @@ def opciones_resena():
         '1': 'Negativa',
         '2': 'Neutral',
         '3': 'Positiva',
-        '4': 'Muy positiva',
-        '5': 'No relevante'
+        '4': 'Muy positiva'
+        #'5': 'No relevante'
     }
 
     print("Seleccione una reseña:")
@@ -653,8 +655,8 @@ def opciones_cantidad_restaurantes_cerca():
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
-        '5': 'Demasiados',
-        '6': 'No relevante'
+        '5': 'Demasiados'
+        #'6': 'No relevante'
     }
 
     print("Seleccione una opción:")
@@ -684,8 +686,8 @@ def opciones_cantidad_atracciones_cerca():
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
-        '5': 'Demasiados',
-        '6': 'No relevante'
+        '5': 'Demasiados'
+        #'6': 'No relevante'
     }
     
     print("Seleccione la cantidad de atracciones:")

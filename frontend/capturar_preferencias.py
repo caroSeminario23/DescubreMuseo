@@ -2,7 +2,7 @@ def capturar_preferencias():
     print("\n=============================================================================")
     print("**----Bienvenido a DescubreMuseo: El sistema de recomendación de museos---**")
     print("=============================================================================")
-    print("\nPor favor, complete el siguiente cuestionario (24 preguntas) para obtener recomendaciones personalizadas")
+    print("\nPor favor, complete el siguiente cuestionario (21 preguntas) para obtener recomendaciones personalizadas")
     
     # Capturamos las preferencias del usuario
     print("\n1. Ingrese el distrito preferido:")
@@ -35,46 +35,46 @@ def capturar_preferencias():
     print("\n10. Indique si le interesa el descuento de la tarifa para discapacitados: ")
     descuento_discapacitados = opciones_descuento_discapacitados()
 
-    print("\n11. Indique si le interesa la disponibilidad de comida: ")
-    comida_disponible = opciones_comida_disponible()
+    #print("\n11. Indique si le interesa la disponibilidad de comida: ")
+    #comida_disponible = opciones_comida_disponible()
 
-    print("\n12. Indique si le interesa la facilidad de reservar su entrada con anticipación: ")
+    print("\n11. Indique si le interesa la facilidad de reservar su entrada con anticipación: ")
     reserva_usuario = opciones_reserva()
 
-    print("\n13. Indique si le interesa la disponibilidad de estacionamiento: ")
+    print("\n12. Indique si le interesa la disponibilidad de estacionamiento: ")
     estacionamiento_usuario = opciones_estacionamiento()
 
-    print("\n14. Indique si le interesa la disponibilidad de venta de objetos: ")
+    print("\n13. Indique si le interesa la disponibilidad de venta de objetos: ")
     venta_objetos_usuario = opciones_venta_objetos()
 
-    print("\n15. Indique si le interesa el permiso para tomar fotos: ")
+    print("\n14. Indique si le interesa el permiso para tomar fotos: ")
     permiso_foto_usuario = opciones_permiso_foto()
 
-    print("\n16. Indique si le interesa que el museo cuente con medidas de accesibilidad para personas discapacitadas: ")
+    print("\n15. Indique si le interesa que el museo cuente con medidas de accesibilidad para personas discapacitadas: ")
     accesibilidad_usuario = opciones_accesibilidad()
 
-    print("\n17. Indique si le interesa la disponibilidad del servicio de guiado: ")
+    print("\n16. Indique si le interesa la disponibilidad del servicio de guiado: ")
     servicio_guiado_usuario = opciones_servicio_guiado()
 
-    print("\n18. Indique si le interesa la disponibilidad de visita virtual: ")
+    print("\n17. Indique si le interesa la disponibilidad de visita virtual: ")
     visita_virtual_usuario = opciones_visita_virtual()
 
-    print("\n19. Indique si le interesa la disponibilidad de una biblioteca: ")
+    print("\n18. Indique si le interesa la disponibilidad de una biblioteca: ")
     servicio_biblioteca_usuario = opciones_servicio_biblioteca()
 
-    print("\n20. Indique si le interesa la presencia del museo en las redes sociales: ")
-    presencia_redes_sociales = opciones_presencia_redes_sociales()
+    #print("\n20. Indique si le interesa la presencia del museo en las redes sociales: ")
+    #presencia_redes_sociales = opciones_presencia_redes_sociales()
 
-    print("\n21. Indique si le interesa la existencia de medios para contactar al museo: ")
-    existencia_medios_comunicacion = opciones_existencia_medios_comunicacion()
+    #print("\n21. Indique si le interesa la existencia de medios para contactar al museo: ")
+    #existencia_medios_comunicacion = opciones_existencia_medios_comunicacion()
 
-    print("\n22. Indique si le interesa la disposición de un sitio web: ")
+    print("\n19. Indique si le interesa la disposición de un sitio web: ")
     sitio_web_existe = opciones_sitio_web()
 
-    print("\n23. Indique si le interesa el número de restaurantes cerca: ")
+    print("\n20. Indique si le interesa el número de restaurantes cerca: ")
     cantidad_rest_cerca = opciones_cantidad_restaurantes_cerca()
 
-    print("\n24. Indique si le interesa el número de atracciones cerca: ")
+    print("\n21. Indique si le interesa el número de atracciones cerca: ")
     cantidad_atrac_cerca = opciones_cantidad_atracciones_cerca()
     
     # Almacenamos las preferencias en un diccionario o una lista
@@ -89,7 +89,7 @@ def capturar_preferencias():
         'descuento_ninos': descuento_ninos,
         'descuento_ancianos': descuento_ancianos,
         'descuento_discapacitados': descuento_discapacitados,
-        'comida_disponible': comida_disponible,
+        #'comida_disponible': comida_disponible,
         'reserva_usuario': reserva_usuario,
         'estacionamiento_usuario': estacionamiento_usuario,
         'venta_objetos_usuario': venta_objetos_usuario,
@@ -98,8 +98,8 @@ def capturar_preferencias():
         'servicio_guiado_usuario': servicio_guiado_usuario,
         'visita_virtual_usuario': visita_virtual_usuario,
         'servicio_biblioteca_usuario': servicio_biblioteca_usuario,
-        'presencia_redes_sociales': presencia_redes_sociales,
-        'existencia_medios_comunicacion': existencia_medios_comunicacion,
+        #'presencia_redes_sociales': presencia_redes_sociales,
+        #'existencia_medios_comunicacion': existencia_medios_comunicacion,
         'sitio_web_existe': sitio_web_existe,
         'cantidad_rest_cerca': cantidad_rest_cerca,
         'cantidad_atrac_cerca': cantidad_atrac_cerca
@@ -122,8 +122,8 @@ def opciones_distritos():
         '10': 'Pueblo Libre',
         '11': 'San Borja',
         '12': 'San Isidro',
-        '13': 'Surco'
-        #'14': 'No relevante'
+        '13': 'Surco',
+        '14': 'No relevante'
     }
 
     print("Seleccione un distrito:")
@@ -155,8 +155,8 @@ def opciones_dia():
         '4': 'Jueves',
         '5': 'Viernes',
         '6': 'Sábado',
-        '7': 'Domingo'
-        #'8': 'No relevante'
+        '7': 'Domingo',
+        '8': 'No relevante'
     }
 
     print("Seleccione un día de la semana:")
@@ -196,8 +196,8 @@ def opciones_hora():
         '11': '18:00',
         '12': '19:00',
         '13': '20:00',
-        '14': '21:00'
-        #'15': 'No relevante'
+        '14': '21:00',
+        '15': 'No relevante'
     }
 
     print("Seleccione una hora:")
@@ -226,8 +226,8 @@ def opciones_categoria():
         '1': 'Tématico',
         '2': 'Arqueológico',
         '3': 'Arte',
-        '4': 'Histórico'
-        #'5': 'No relevante'
+        '4': 'Histórico',
+        '5': 'No relevante'
     }
 
     print("Seleccione una categoría de museo:")
@@ -279,8 +279,8 @@ def opciones_tarifa():
         '2': 'Barata',
         '3': 'Media',
         '4': 'Alta',
-        '5': 'Muy alta'
-        #'6': 'No relevante'
+        '5': 'Muy alta',
+        '6': 'No relevante'
     }
     
     print("Seleccione una tarifa:")
@@ -309,8 +309,8 @@ def opciones_resena():
         '1': 'Negativa',
         '2': 'Neutral',
         '3': 'Positiva',
-        '4': 'Muy positiva'
-        #'5': 'No relevante'
+        '4': 'Muy positiva',
+        '5': 'No relevante'
     }
 
     print("Seleccione una reseña:")
@@ -655,8 +655,8 @@ def opciones_cantidad_restaurantes_cerca():
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
-        '5': 'Demasiados'
-        #'6': 'No relevante'
+        '5': 'Demasiados',
+        '6': 'No relevante'
     }
 
     print("Seleccione una opción:")
@@ -686,8 +686,8 @@ def opciones_cantidad_atracciones_cerca():
         '2': 'Pocos',
         '3': 'Algunos',
         '4': 'Muchos',
-        '5': 'Demasiados'
-        #'6': 'No relevante'
+        '5': 'Demasiados',
+        '6': 'No relevante'
     }
     
     print("Seleccione la cantidad de atracciones:")

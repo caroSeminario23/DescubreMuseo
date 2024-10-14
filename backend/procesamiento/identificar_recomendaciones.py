@@ -2,7 +2,7 @@ from .carga_un_hecho import cargar_clips
 
 def identificar_recomendaciones():
     id_museos_recomendados = []
-    for i in range(1, 11): # Hasta 40
+    for i in range(1, 40): # Hasta 40
         # Cargar los clips
         env = cargar_clips(i)
 
@@ -23,6 +23,9 @@ def identificar_recomendaciones():
         for fact in env.facts():
             if fact.template.name == "recomendacion":
                 id_museos_recomendados.append(fact['id_museo'])
+        
+        # Limpiar el entorno
+        env.clear()
 
     print(id_museos_recomendados)
     return id_museos_recomendados

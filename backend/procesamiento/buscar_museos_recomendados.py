@@ -44,7 +44,7 @@ def mostrar_opciones_museos_recomendados(id_museos_recomendados):
     # Opción para salir
     print(f"{len(museos_info) + 1}. No deseo ver más información.")
     print("=====================================")
-    print("Si desea más detalle sobre uno de estos museos, digite el número correspondiente o, en todo caso, la opción de salida (3).")
+    print(f"Si desea más detalle sobre uno de estos museos, digite el número correspondiente o, en todo caso, la opción de salida ({len(museos_info) + 1}).")
     opcion_usuario = input("Opción: ").strip()
 
     while not opcion_usuario.isdigit() or 1 > int(opcion_usuario) or int(opcion_usuario) > len(museos_info)+2:

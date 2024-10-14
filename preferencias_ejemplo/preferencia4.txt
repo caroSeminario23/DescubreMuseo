@@ -1,0 +1,27 @@
+
+    (deffacts inicial
+        (preferencias_usuario
+            (distrito_especificado "Pueblo Libre")
+            (dia_especificado Miércoles)
+            (hora_especificada 18)
+            (categoria_especificada Arqueológico)
+            (concurrencia Relevante)
+            (tarifa_usuario "Alta")
+            (resena_usuario "Muy positiva")
+            (descuento_ninos Relevante)
+            (descuento_ancianos Relevante)
+            (descuento_discapacitados No_relevante)
+            (reserva_usuario No_relevante)
+            (estacionamiento_usuario TRUE)
+            (venta_objetos_usuario TRUE)
+            (permiso_foto_usuario TRUE)
+            (accesibilidad_usuario TRUE)
+            (servicio_guiado_usuario TRUE)
+            (visita_virtual_usuario No_relevante)
+            (servicio_biblioteca_usuario No_relevante)
+            (sitio_web_existe TRUE)
+            (cantidad_rest_cerca "Pocos")
+            (cantidad_atrac_cerca "Pocos")
+        )
+    )
+    

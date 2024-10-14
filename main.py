@@ -8,7 +8,7 @@ from backend.procesamiento.buscar_museos_recomendados import mostrar_opciones_mu
 '''# Convertir los museos en hechos
 convertir_museos_hechos()'''
 
-'''# Ejemplo de uso
+# Ejemplo de uso
 preferencias_usuario = capturar_preferencias()
 
 # Imprimir las preferencias capturadas por el usuario línea por línea si es que está guardado como un diccionario
@@ -22,7 +22,7 @@ hecho_clips = generar_hecho_preferencia_clips(preferencias_usuario)
 
 # Guardar el hecho en un archivo .clp
 guardar_hecho_preferencia_clips(hecho_clips)
-print("\nHecho guardado correctamente")'''
+print("\nHecho guardado correctamente")
 
 # Cargar los hechos y reglas en CLIPS
 museos_recomendados = identificar_recomendaciones()

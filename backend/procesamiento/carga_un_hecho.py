@@ -31,7 +31,7 @@ def cargar_reglas_intermedias(env):
 
 def cargar_regla_general(env):
     # Cargar la regla general desde un archivo externo
-    regla_general_path = "backend/base_conocimiento/rules/regla_general.clp"
+    regla_general_path = "backend/base_conocimiento/rules/regla_prueba.clp"
     try:
         env.load(regla_general_path)
         print("Regla general cargada con éxito.")
@@ -49,7 +49,7 @@ def cargar_hecho_museo(env, id):
 
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
-    hechos_path = "backend/base_hechos/preferencia_usuario32.clp"
+    hechos_path = "backend/base_hechos/preferencia_usuario2.clp"
     try:
         env.load(hechos_path)
         print("Hecho de preferencias de usuario cargado con éxito.")

@@ -36,6 +36,13 @@
     (assert (procesamiento_tarifa (min_tarifa 45.01) (max_tarifa 1000)))
 )
 
+; Si la tarifa es No_relevante → min_tarifa=0 y max_tarifa=1000
+(defrule regla_tarifa_no_relevante
+    (preferencias_usuario (tarifa_usuario No_relevante))
+    =>
+    (assert (procesamiento_tarifa (min_tarifa 0) (max_tarifa 1000)))
+)
+
 
 ; Reglas sobre resena
 ; Si resena_usuario=negativa → min_puntaje=0 y max_puntaje=1.25
@@ -66,13 +73,28 @@
     (assert (procesamiento_resena (min_puntaje 3.75)(max_puntaje 5.1)))
 )
 
+; Si la reseña es No_relevante → min_puntaje=0 y max_puntaje=5.1
+(defrule regla_resena_no_relevante
+    (preferencias_usuario (resena_usuario No_relevante))
+    =>
+    (assert (procesamiento_resena (min_puntaje 0)(max_puntaje 5.1)))
+)
+
 
 ; Reglas sobre servicios
 ; Si comida_disponible=True → servicio_restaurante_usuario=True
-(defrule regla_servicio_restaurante
+(defrule regla_servicio_comida
     (preferencias_usuario (comida_disponible Relevante))
     =>
     (assert (procesamiento_comida (servicio_restaurante_usuario TRUE) (servicio_cafeteria_usuario TRUE)))
+)
+
+; Si la comida disponibles es No_relevante → servicio_restaurante_usuario=True o servicio_cafeteria_usuario=True o servicio_restaurante_usuario=False o servicio_cafeteria_usuario=False
+(defrule regla_servicio_comida_no_relevante
+    (preferencias_usuario (comida_disponible No_relevante))
+    =>
+    (assert (procesamiento_comida (servicio_restaurante_usuario TRUE) (servicio_cafeteria_usuario TRUE)))
+    (assert (procesamiento_comida (servicio_restaurante_usuario FALSE) (servicio_cafeteria_usuario FALSE)))
 )
 
 ; Si comida_disponible=True → servicio_cafeteria_usuario=True
@@ -85,10 +107,18 @@
 
 ; Reglas sobre redes sociales y comunicación
 ; Si presencia_redes_sociales → pag_facebook_existe=True
-(defrule regla_facebook
+(defrule regla_redes_sociales
     (preferencias_usuario (presencia_redes_sociales Relevante))
     =>
     (assert (procesamiento_redes_sociales (pag_facebook_existe TRUE) (pag_instagram_existe TRUE) (pag_tiktok_existe TRUE)))
+)
+
+; Si presencia_redes_sociales es No_relevante → pag_facebook_existe=True o pag_instagram_existe=True o pag_tiktok_existe=True o pag_facebook_existe=False o pag_instagram_existe=False o pag_tiktok_existe=False
+(defrule regla_redes_sociales_no_relevante
+    (preferencias_usuario (presencia_redes_sociales No_relevante))
+    =>
+    (assert (procesamiento_redes_sociales (pag_facebook_existe TRUE) (pag_instagram_existe TRUE) (pag_tiktok_existe TRUE)))
+    (assert (procesamiento_redes_sociales (pag_facebook_existe FALSE) (pag_instagram_existe FALSE) (pag_tiktok_existe FALSE)))
 )
 
 ; Si presencia_redes_sociales → pag_instagram_existe=True
@@ -106,10 +136,18 @@
 ;)
 
 ; Si existencia_medios_comunicacion → telefono_existe=True
-(defrule regla_telefono
+(defrule regla_medios_comunicacion
     (preferencias_usuario (existencia_medios_comunicacion Relevante))
     =>
     (assert (procesamiento_medios_comunicacion (telefono_existe TRUE) (email_existe TRUE)))
+)
+
+; Si existencia_medios_comunicacion es No_relevante → telefono_existe=True o email_existe=True o telefono_existe=False o email_existe=False
+(defrule regla_medios_comunicacion_no_relevante
+    (preferencias_usuario (existencia_medios_comunicacion No_relevante))
+    =>
+    (assert (procesamiento_medios_comunicacion (telefono_existe TRUE) (email_existe TRUE)))
+    (assert (procesamiento_medios_comunicacion (telefono_existe FALSE) (email_existe FALSE)))
 )
 
 ; Si existencia_medios_comunicacion → email_existe=True
@@ -156,6 +194,13 @@
     (assert (procesamiento_restaurantes (min_rest_prox 3001) (max_rest_prox 10000)))
 )
 
+; Si cantidad_rest_cerca=No_relevante → min_rest_prox=0 y max_rest_prox=10000
+(defrule regla_rest_cerca_no_relevante
+    (preferencias_usuario (cantidad_rest_cerca No_relevante))
+    =>
+    (assert (procesamiento_restaurantes (min_rest_prox 0) (max_rest_prox 10000)))
+)
+
 
 ; Reglas sobre atracciones cercanas
 ; Si cantidad_atrac_cerca=ningun → min_atracciones=0 y max_atracciones=0
@@ -191,4 +236,11 @@
     (preferencias_usuario (cantidad_atrac_cerca "Demasiados"))
     =>
     (assert (procesamiento_atracciones (min_atracciones 301) (max_atracciones 10000)))
+)
+
+; Si cantidad_atrac_cerca=No_relevante → min_atracciones=0 y max_atracciones=10000
+(defrule regla_atrac_cerca_no_relevante
+    (preferencias_usuario (cantidad_atrac_cerca No_relevante))
+    =>
+    (assert (procesamiento_atracciones (min_atracciones 0) (max_atracciones 10000)))
 )

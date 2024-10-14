@@ -1,4 +1,4 @@
-from carga_un_hecho import cargar_clips
+from pruebas.procesamiento.cargar_un_hecho import cargar_clips
 
 id_museos_recomendados = []
 for i in range(2, 4):

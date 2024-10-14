@@ -43,7 +43,7 @@ def cargar_regla_general(env):
 
 def cargar_hechos_preferencias_usuario(env):
     # Cargar el hecho desde un archivo externo
-    hechos_path = "backend/base_hechos/preferencia_usuario.clp"
+    hechos_path = "backend/base_hechos/preferencia_usuario32.clp"
     try:
         env.load(hechos_path)
         print("Hecho de preferencias de usuario cargado con éxito.")
